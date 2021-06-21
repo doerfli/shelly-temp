@@ -1,0 +1,12 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+// You can add your own custom components/styles here
+
+
+body {
+@apply bg-blue-500 text-white;
+}
+
+@import "tailwindcss/utilities";
+

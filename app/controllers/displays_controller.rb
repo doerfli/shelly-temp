@@ -1,9 +1,9 @@
 class DisplaysController < ApplicationController
 
     def show
+        logger.info params
         @device = Device.find_by(name: params[:id])
         @device = Device.find_by(ident: params[:id]) if @device.nil?
-        logger.info @device.ident
 
         hum_type = Type.find_by(name: 'hum')
         temp_type = Type.find_by(name: 'temp')
