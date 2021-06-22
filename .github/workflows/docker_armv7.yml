@@ -1,10 +1,11 @@
-name: Docker
+name: Docker armv7
 
-on:
-  push:
-    branches: [ main ]
-    tags:
-      - '*'
+# on:
+#   push:
+#     branches: [ main ]
+#     tags:
+#       - '*'
+on: workflow_dispatch
 
 jobs:
   docker:
@@ -19,5 +20,5 @@ jobs:
         uses: crazy-max/ghaction-docker-buildx@v1
         with:
           version: latest      
-      - run: docker buildx build -f Dockerfile-prod -t docker.pkg.github.com/doerfli/shelly-temp/shelly-temp:${{ env.GITHUB_REF_SLUG }} --platform linux/amd64,linux/arm/v7,linux/arm64 .
+      - run: docker buildx build -f Dockerfile-prod -t docker.pkg.github.com/doerfli/shelly-temp/shelly-temp:${{ env.GITHUB_REF_SLUG }} --platform linux/arm/v7 .
       - run: docker push docker.pkg.github.com/doerfli/shelly-temp/shelly-temp:${{ env.GITHUB_REF_SLUG }}
