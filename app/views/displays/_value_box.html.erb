@@ -1,5 +1,5 @@
-<div class="flex-none h-48 w-48 p-4 border-4 m-4 box-border border-gray-800 rounded-xl bg-gray-800 text-gray-100">
-    <div class="text-center mb-4 text-xl font-bold"><%= key %></div> 
-    <div class="text-center mt-8  text-4xl"><%= value %></div>
-    <div class="text-center mt-8 text-xs"><%= timestamp.strftime("%e.%m.%y %R") %></div>
+<div class="flex-none h-64 w-64 p-4 border-4 m-4 box-border border-gray-800 rounded-xl bg-gray-800 text-gray-100">
+    <div class="text-center mb-4 text-2xl"><%= key %></div> 
+    <div class="text-center mt-12 text-5xl font-bold"><%= value %></div>
+    <div class="text-center mt-16 text-xs">Last update: <%= timestamp.strftime("%e.%m.%y %R") %></div>
 </div>

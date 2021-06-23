@@ -1,8 +1,8 @@
 <div class="container mx-auto">
-    <h1 class="m-4 text-2xl font-bold"><%= @device.ident %></h1>
+    <h1 class="m-4 text-3xl font-bold"><%= @device.ident %></h1>
     <div class="flex flex-row flex-wrap">
         <%= render partial: "value_box", locals: { key: "Temperature", value: "#{@temp.value}℃", timestamp: @temp.created_at } %>
-        <%= render partial: "value_box", locals: { key: "Humidity", value: @hum.value, timestamp: @hum.created_at } %>
+        <%= render partial: "value_box", locals: { key: "Humidity", value: "#{@hum.value}%", timestamp: @hum.created_at } %>
     </div>
     </div>
 </div>
