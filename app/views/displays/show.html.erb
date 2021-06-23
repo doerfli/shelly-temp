@@ -1,16 +1,8 @@
-<div class="container mx-auto px-4">
-    <h1 class="m-8 text-2xl font-bold"><%= @device.ident %></h1>
-    <div class="flex flex-row px-4">
-        <div class="h-48 w-48 p-4 border-4 m-4 box-border border-black rounded-xl bg-gray-800 text-gray-100">
-            <div class="text-center mb-4 text-xl font-bold">Temperature</div> 
-            <div class="text-center mt-8  text-4xl"><%= @temp.value%>°C</div>
-            <div class="text-center mt-8 text-xs"><%= @temp.created_at%></div>
-        </div>
-        <div class="h-48 w-48 p-4 border-4 m-4 box-border  border-black rounded-xl bg-gray-800 text-gray-100">
-            <div class="text-center mb-4 text-xl font-bold">Humidity</div>
-            <div class="text-center mt-8 text-4xl"><%= @hum.value%>%</div>
-            <div class="text-center mt-8 text-xs"><%= @hum.created_at%></div>
-        </div>
+<div class="container mx-auto">
+    <h1 class="m-4 text-2xl font-bold"><%= @device.ident %></h1>
+    <div class="flex flex-row flex-wrap">
+        <%= render partial: "value_box", locals: { key: "Temperature", value: "#{@temp.value}℃", timestamp: @temp.created_at } %>
+        <%= render partial: "value_box", locals: { key: "Humidity", value: @hum.value, timestamp: @hum.created_at } %>
     </div>
     </div>
 </div>
