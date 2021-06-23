@@ -1,8 +1,28 @@
 <div class="container mx-auto">
     <h1 class="m-4 text-3xl font-bold"><%= @device.ident %></h1>
     <div class="flex flex-row flex-wrap">
-        <%= render partial: "value_box", locals: { key: "Temperature", value: "#{@temp.value}℃", timestamp: @temp.created_at } %>
-        <%= render partial: "value_box", locals: { key: "Humidity", value: "#{@hum.value}%", timestamp: @hum.created_at } %>
-    </div>
+        <%= render partial: "value_box", locals: { 
+            key: "Temperature", 
+            value: "#{@temp.value}℃", 
+            timestamp: @temp.created_at, 
+            color_conditions: [
+                { :l => -99, :u => 18, :cls => "bg-blue-300"}, 
+                { :l => 18, :u => 22, :cls => "bg-teal-300"},
+                { :l => 22, :u => 25, :cls => "bg-emerald-300"}, 
+                { :l => 25, :u => 27, :cls => "bg-amber-300"}, 
+                { :l => 27, :u => 99, :cls => "bg-red-300"}
+            ]
+        } %>
+        <%= render partial: "value_box", locals: { 
+            key: "Humidity", 
+            value: "#{@hum.value}%", 
+            timestamp: @hum.created_at, 
+            color_conditions: [
+                { :l => 0, :u => 40, :cls => "bg-blue-300"}, 
+                { :l => 40, :u => 55, :cls => "bg-emerald-300"}, 
+                { :l => 55, :u => 65, :cls => "bg-amber-300"},
+                { :l => 65, :u => 100, :cls => "bg-red-300"}
+            ] 
+        } %>    </div>
     </div>
 </div>

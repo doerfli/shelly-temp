@@ -1,4 +1,4 @@
-<div class="flex-none h-48 w-64 border-4 m-4 box-border border-gray-800 rounded-xl bg-gray-800 text-gray-100">
+<div class="flex-none h-48 w-64 border-2 m-4 box-border border-gray-500 rounded-xl text-gray-800 <%= bg_color(value, color_conditions) %>">
     <div class="text-center mt-2 mb-4 text-2xl"><%= key %></div> 
     <div class="text-center mt-8 text-5xl font-bold"><%= value %></div>
     <div class="text-center mt-8 text-xs">Last update: <%= timestamp.strftime("%e.%m.%y %R") %></div>
