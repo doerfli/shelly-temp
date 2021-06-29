@@ -1,4 +1,4 @@
-module DisplaysHelper
+module DevicesHelper
 
     def bg_color(value, color_conditions)
         return "bg-color-gray-200" if color_conditions.nil?

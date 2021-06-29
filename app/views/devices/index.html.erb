@@ -1,0 +1,16 @@
+<div class="container mx-auto">
+    <h1 class="m-4 text-3xl font-bold">Devices</h1>
+    <ul class="m-4 list-disc list-inside">
+        <% @devices.each{ |device| %>
+            <% if ! device.name.nil? %>
+                <li class="leading-loose">
+                    <%= link_to("#{device.ident} (#{device.ident})", device) %>
+                </li>
+            <% else %>
+                <li class="leading-loose">    
+                    <%= link_to(device.ident, device) %>
+                </li>
+            <% end %>
+        <% } %>
+    </ul>
+</div>

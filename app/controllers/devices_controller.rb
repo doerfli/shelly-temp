@@ -1,4 +1,8 @@
-class DisplaysController < ApplicationController
+class DevicesController < ApplicationController
+
+    def index
+        @devices = Device.all.order(:name)
+    end
 
     def show
         logger.info params
