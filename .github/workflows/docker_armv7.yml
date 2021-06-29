@@ -17,7 +17,7 @@ jobs:
       - run: echo ${{ secrets.GITHUB_TOKEN }} | docker login docker.pkg.github.com -u doerfli --password-stdin
       - name: install buildx
         id: buildx
-        uses: crazy-max/ghaction-docker-buildx@v1
+        uses: crazy-max/ghaction-docker-buildx@v3.3.1
         with:
           version: latest      
       - run: docker buildx build -f Dockerfile-prod -t docker.pkg.github.com/doerfli/shelly-temp/shelly-temp:${{ env.GITHUB_REF_SLUG }} --platform linux/arm/v7 .
