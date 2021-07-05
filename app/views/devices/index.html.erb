@@ -5,10 +5,12 @@
             <% if ! device.name.nil? %>
                 <li class="leading-loose">
                     <%= link_to("#{device.ident} (#{device.ident})", device) %>
+                    T: <%= device.last_temp_value %>℃ H: <%= device.last_hum_value %>% 
                 </li>
             <% else %>
                 <li class="leading-loose">    
-                    <%= link_to(device.ident, device) %>
+                    <%= link_to(device.ident, device) %> -
+                    T: <%= device.last_temp_value %>℃ H: <%= device.last_hum_value %>% 
                 </li>
             <% end %>
         <% } %>
