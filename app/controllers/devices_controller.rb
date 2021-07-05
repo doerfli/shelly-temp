@@ -10,11 +10,8 @@ class DevicesController < ApplicationController
         @device = Device.find_by(ident: params[:id]) if @device.nil?
         @title = "#{@device.ident} Temp&Hum"
 
-        hum_type = Type.find_by(name: 'hum')
-        temp_type = Type.find_by(name: 'temp')
-
-        @hum = Value.where(device: @device, type: hum_type).order(created_at: :desc).first
-        @temp = Value.where(device: @device, type: temp_type).order(created_at: :desc).first
+        @hum = Value.includes(:type).where(device: @device, type: { name: 'hum' }).order(created_at: :desc).first
+        @temp = Value.includes(:type).where(device: @device, type: { name: 'temp' }).order(created_at: :desc).first
     end
 
 end
