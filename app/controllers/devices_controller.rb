@@ -6,9 +6,13 @@ class DevicesController < ApplicationController
 
     def show
         logger.info params
-        @device = Device.find_by(name: params[:id])
-        @device = Device.find_by(ident: params[:id]) if @device.nil?
-        @title = "#{@device.ident} Temp&Hum"
+        @device = Device.find_by(ident: params[:ident])
+        if @device.name.nil?
+            @title = "#{@device.ident} Temp&Hum"
+        else
+            @title = "#{@device.name} Temp&Hum" 
+        end
+        
 
         @hum = Value.includes(:type).where(device: @device, type: { name: 'hum' }).order(created_at: :desc).first
         @temp = Value.includes(:type).where(device: @device, type: { name: 'temp' }).order(created_at: :desc).first

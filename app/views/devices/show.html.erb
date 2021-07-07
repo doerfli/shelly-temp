@@ -1,5 +1,5 @@
 <div class="container mx-auto">
-    <h1 class="m-4 text-3xl font-bold"><%= @device.ident %></h1>
+    <h1 class="m-4 text-3xl font-bold"><%= @device.name || @device.ident %></h1>
     <div class="flex flex-row flex-wrap">
         <%= render partial: "value_box", locals: { 
             key: "Temperature", 
