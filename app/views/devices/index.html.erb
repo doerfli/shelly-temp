@@ -1,18 +1,17 @@
 <div class="container mx-auto">
     <h1 class="m-4 text-3xl font-bold">Devices</h1>
-    <ul class="m-4 list-disc list-inside">
-        <% @devices.each{ |device| %>
-            <% if ! device.name.nil? %>
-                <li class="leading-loose">
+
+    <% @devices.each{ |device| %>
+        <div class="w-96 px-4 py-2">
+            <p class="text-l font-bold">
+                <% if ! device.name.nil? %>
                     <%= link_to("#{device.name} (#{device.ident})", device) %>
-                    T: <%= device.last_temp_value %>℃ H: <%= device.last_hum_value %>% 
-                </li>
-            <% else %>
-                <li class="leading-loose">    
-                    <%= link_to(device.ident, device) %> -
-                    T: <%= device.last_temp_value %>℃ H: <%= device.last_hum_value %>% 
-                </li>
-            <% end %>
-        <% } %>
-    </ul>
+                <% else %>
+                    <%= link_to(device.ident, device) %>
+                <% end %>
+            </p>
+            <div class="w-40 inline-block">Temp: <%= device.last_temp_value %>℃</div>
+            <div class="w-40 inline-block">Hum: <%= device.last_hum_value %>%</div>
+        </div>
+    <% } %>
 </div>
