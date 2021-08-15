@@ -2,7 +2,7 @@
     <h1 class="m-4 text-3xl font-bold">Devices</h1>
 
     <% @devices.each{ |device| %>
-        <div class="w-96 px-4 py-2">
+        <div class="px-4 py-2">
             <p class="text-l font-bold">
                 <% if ! device.name.nil? %>
                     <%= link_to("#{device.name} (#{device.ident})", device) %>
