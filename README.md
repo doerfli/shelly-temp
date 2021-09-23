@@ -26,3 +26,8 @@ Point your shelly to `http://<hostname>:<port>/measurements/new`
 
 Once at least one event was sent, open a webbrowser to `http://<hostname>:<port>/displays/<deviceid>`
 
+## Test request
+
+```
+curl "http://localhost:3000/measurements/new?id=device01&temp=21.23&hum=58.34"
+```
