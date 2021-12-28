@@ -40,3 +40,5 @@ yarn-debug.log*
 .yarn-integrity
 
 pgdata/
+/app/assets/builds/*
+!/app/assets/builds/.keep
