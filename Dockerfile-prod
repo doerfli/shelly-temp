@@ -1,32 +1,25 @@
 FROM ruby:3.0.3-slim-bullseye
 
-# RUN apt-get update && apt-get install -y \
-#   nodejs yarn git build-base libxml2 libxml2-dev libxml2-utils libxslt-dev tzdata \
-#   libc6-compat sassc libsass \
-#   postgresql-dev postgresql-client \
-#   && rm -rf /var/lib/apt/lists/*
-
-# yarn repo
-
-RUN apt-get update && apt-get install -y \
-  curl build-essential libpq-dev libsass-dev sassc \
-  && rm -rf /var/lib/apt/lists/*
-
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-
-RUN apt-get update && apt-get install -y \
-  yarn \
-  && rm -rf /var/lib/apt/lists/*
-
-
-
 ENV HOME /app
 ENV RAILS_ENV production
 ENV RAILS_SERVE_STATIC_FILES true
 ENV SECRET_KEY_BASE abcdefgh12345678
 
 WORKDIR $HOME
+
+# install apt dependencies
+RUN apt-get update && apt-get install -y \
+  curl build-essential libpq-dev libsass-dev sassc \
+  && rm -rf /var/lib/apt/lists/*
+
+# add yarn repo
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+
+# install yarn
+RUN apt-get update && apt-get install -y \
+  yarn \
+  && rm -rf /var/lib/apt/lists/*
 
 # Install gems
 ADD .ruby-version $HOME/
