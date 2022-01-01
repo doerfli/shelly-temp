@@ -1,4 +1,4 @@
-FROM ruby:3.0.3-slim-bullseye
+FROM ruby:3.0.3-alpine
 
 ENV HOME /app
 ENV RAILS_ENV production
@@ -7,19 +7,11 @@ ENV SECRET_KEY_BASE abcdefgh12345678
 
 WORKDIR $HOME
 
-# install apt dependencies
-RUN apt-get update && apt-get install -y \
-  curl build-essential libpq-dev libsass-dev sassc \
-  && rm -rf /var/lib/apt/lists/*
-
-# add yarn repo
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-
-# install yarn
-RUN apt-get update && apt-get install -y \
-  yarn \
-  && rm -rf /var/lib/apt/lists/*
+RUN apk update && apk upgrade && \
+    apk add --update nodejs yarn git build-base libxml2 libxml2-dev libxml2-utils libxslt-dev tzdata && \
+    apk add libc6-compat sassc libsass && \
+    apk add postgresql-dev postgresql-client && \
+    rm -rf /var/cache/apk/*
 
 # Install gems
 ADD .ruby-version $HOME/
