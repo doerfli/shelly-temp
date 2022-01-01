@@ -8,9 +8,7 @@ ENV SECRET_KEY_BASE abcdefgh12345678
 WORKDIR $HOME
 
 RUN apk update && apk upgrade && \
-    apk add --update nodejs yarn git build-base libxml2 libxml2-dev libxml2-utils libxslt-dev tzdata && \
-    apk add libc6-compat sassc libsass && \
-    apk add postgresql-dev postgresql-client && \
+    apk add --update nodejs yarn git build-base libxml2 libxml2-dev libxml2-utils libxslt-dev tzdata libc6-compat postgresql-dev postgresql-client && \
     rm -rf /var/cache/apk/*
 
 # Install gems
