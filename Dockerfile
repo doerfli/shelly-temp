@@ -42,7 +42,7 @@ WORKDIR $HOME
 
 RUN apk update && apk upgrade && \
     apk add --update --no-cache \
-        nodejs tzdata imagemagick postgresql-client && \
+        nodejs libxslt-dev tzdata imagemagick postgresql-client && \
     rm -rf /var/cache/apk/* 
 
 # Install gems
