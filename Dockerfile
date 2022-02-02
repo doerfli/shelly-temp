@@ -18,8 +18,6 @@ RUN apk update && apk upgrade && \
 RUN gem update bundler && \
     bundle config --local build.nokogiri --use-system-libraries && \
     bundle config set without 'development test' && \
-    bundle config set --local deployment 'true' && \
-    bundle config set --local path 'vendor/bundle' && \
     bundle install --jobs 4
 
 # Add the app code
