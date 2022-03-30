@@ -16,9 +16,9 @@ RUN apk update && apk upgrade && \
 
 # # speed up install of nokogiri gem
 RUN gem update bundler && \
-    bundle config --local build.nokogiri --use-system-libraries && \
     bundle config set without 'development test' && \
     bundle config set --local path 'vendor/bundle' && \
+    bundle config set force_ruby_platform true && \
     bundle install --jobs 4
 
 # Add the app code
@@ -47,6 +47,8 @@ RUN apk update && apk upgrade && \
 
 # Install gems
 RUN gem update bundler && \
+    bundle config set without 'development test' && \
+    bundle config set force_ruby_platform true && \
     bundle config set --local deployment 'true' && \
     bundle config set --local path 'vendor/bundle'
 
