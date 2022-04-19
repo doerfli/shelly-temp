@@ -276,6 +276,7 @@ DEPENDENCIES
   cssbundling-rails
   jbuilder (~> 2.11)
   listen (~> 3.7)
+  nokogiri (~> 1.13.4)
   pg (>= 0.18)
   puma (~> 5.6)
   rack-mini-profiler (~> 3.0)
