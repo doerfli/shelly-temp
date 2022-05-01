@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_05_210530) do
-
+ActiveRecord::Schema[7.0].define(version: 2021_07_05_210530) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,16 +18,16 @@ ActiveRecord::Schema.define(version: 2021_07_05_210530) do
     t.string "ident"
     t.string "name"
     t.string "location"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["ident"], name: "index_devices_on_ident"
     t.index ["name"], name: "index_devices_on_name"
   end
 
   create_table "types", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["name"], name: "index_types_on_name"
   end
 
@@ -36,8 +35,8 @@ ActiveRecord::Schema.define(version: 2021_07_05_210530) do
     t.string "value"
     t.bigint "device_id", null: false
     t.bigint "type_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["device_id"], name: "index_values_on_device_id"
     t.index ["type_id"], name: "index_values_on_type_id"
   end
