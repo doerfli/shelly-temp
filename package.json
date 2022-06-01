@@ -2,7 +2,7 @@
   "name": "shelly-temp",
   "private": true,
   "dependencies": {
-    "@rails/ujs": "^7.0.2",
+    "@rails/ujs": "^7.0.3",
     "@rails/webpacker": "5.4.3",
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.13",
