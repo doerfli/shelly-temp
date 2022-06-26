@@ -4,14 +4,14 @@
         <%= render partial: "value_box", locals: { 
             key: "Temperature", 
             value: "#{@temp.value}℃", 
-            timestamp: @temp.created_at, 
-            color_conditions: @color_conditions_temp
+            timestamp: @temp.created_at,
+            bg_color: bg_color_temp(@temp.value)
         } %>
         <%= render partial: "value_box", locals: { 
             key: "Humidity", 
             value: "#{@hum.value}%", 
-            timestamp: @hum.created_at, 
-            color_conditions: @color_conditions_hum
+            timestamp: @hum.created_at,
+            bg_color: bg_color_hum(@hum.value)
         } %>
     </div>
     <div class="m-4">
