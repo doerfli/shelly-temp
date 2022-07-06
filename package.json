@@ -2,7 +2,7 @@
   "name": "shelly-temp",
   "private": true,
   "dependencies": {
-    "@babel/plugin-proposal-private-methods": "^7.17.12",
+    "@babel/plugin-proposal-private-methods": "^7.18.6",
     "@babel/plugin-proposal-private-property-in-object": "^7.17.12",
     "@rails/ujs": "^7.0.3",
     "@rails/webpacker": "5.4.3",
