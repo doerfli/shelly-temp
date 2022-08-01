@@ -10,7 +10,7 @@
     "chart.js": "^3.8.2",
     "chartkick": "^4.2.0",
     "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.4",
+    "tailwindcss": "^3.1.7",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
   },
