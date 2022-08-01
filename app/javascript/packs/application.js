@@ -10,6 +10,7 @@ import Rails from "@rails/ujs"
 
 // Tailwind CSS
 import "./application"
+import "chartkick/chart.js"
 
 Rails.start()
 // Turbolinks.start()

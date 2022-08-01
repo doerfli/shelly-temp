@@ -14,6 +14,18 @@
             bg_color: bg_color_hum(@hum.value)
         } %>
     </div>
+    <% unless @temp_l7d.empty? %>
+        <h2 class="m-4  text-xl font-bold">Temperature last 7 days</h2>
+        <div class="m-4">
+            <%= line_chart @temp_l7d.map{ |t| [t.created_at, t.value] } %>
+        </div>
+    <% end %>
+    <% unless @hum_l7d.empty? %>
+        <h2 class="m-4  text-xl font-bold">Humidity last 7 days</h2>
+        <div class="m-4">
+            <%= line_chart @hum_l7d.map{ |t| [t.created_at, t.value] } %>
+        </div>
+    <% end %>
     <div class="m-4">
         <%= link_to "Back to devices", devices_path %>
     </div>
