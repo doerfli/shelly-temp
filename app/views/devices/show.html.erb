@@ -17,13 +17,13 @@
     <% unless @temp_l7d.empty? %>
         <h2 class="m-4  text-xl font-bold">Temperature last 7 days</h2>
         <div class="m-4">
-            <%= line_chart @temp_l7d.map{ |t| [t.created_at, t.value] } %>
+            <%= line_chart @temp_l7d.map{ |t| [t.created_at, t.value] }, min: @temp_l7d_min, max: @temp_l7d_max %>
         </div>
     <% end %>
     <% unless @hum_l7d.empty? %>
         <h2 class="m-4  text-xl font-bold">Humidity last 7 days</h2>
         <div class="m-4">
-            <%= line_chart @hum_l7d.map{ |t| [t.created_at, t.value] } %>
+            <%= line_chart @hum_l7d.map{ |t| [t.created_at, t.value] }, min: @hum_l7d_min, max: @hum_l7d_max %>
         </div>
     <% end %>
     <div class="m-4">
