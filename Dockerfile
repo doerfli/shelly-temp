@@ -7,9 +7,6 @@ ENV HOME=/app \
     SECRET_KEY_BASE=abcdefgh12345678 
 WORKDIR $HOME
 
-ADD .ruby-version $HOME/
-ADD Gemfile* $HOME/
-
 RUN apk update && apk upgrade && \
     apk add --update --no-cache nodejs yarn build-base libxml2-dev libxslt-dev tzdata postgresql-dev && \
     rm -rf /var/cache/apk/* 
@@ -18,8 +15,13 @@ RUN apk update && apk upgrade && \
 RUN gem update bundler && \
     bundle config set without 'development test' && \
     bundle config set --local path 'vendor/bundle' && \
-    bundle config set force_ruby_platform true && \
-    bundle install --jobs 4
+    bundle config set force_ruby_platform true 
+
+ADD .ruby-version $HOME/
+ADD Gemfile* $HOME/
+
+# # speed up install of nokogiri gem
+RUN bundle install --jobs 4
 
 # Add the app code
 COPY . $HOME
