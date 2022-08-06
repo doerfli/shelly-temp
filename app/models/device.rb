@@ -11,7 +11,7 @@ class Device < ApplicationRecord
     end
 
     def last_update_timestamp
-        values.joins(:type).where(type: { name: 'temp'}).order(created_at: :desc).first.created_at.strftime("%e.%m.%y %R") || 'N/A'
+        values.joins(:type).where(type: { name: 'temp'}).order(created_at: :desc).first.created_at.strftime("%d.%m.%y %R") || 'N/A'
     end
 
 end
