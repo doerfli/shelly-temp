@@ -12,8 +12,6 @@ gem 'pg', '>= 0.18'
 gem 'puma', '~> 5.6'
 gem 'cssbundling-rails'
 gem "sprockets-rails"
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 5.4'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -32,6 +30,8 @@ gem 'nokogiri', '~> 1.13.8'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem "chartkick"
+
+gem 'jsbundling-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
