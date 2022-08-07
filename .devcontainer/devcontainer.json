@@ -9,6 +9,13 @@
 		//"terminal.integrated.shell.linux": "/bin/bash"
 	},
 
+	"features": {
+		"docker-from-docker": {
+			"version": "latest",
+			"moby": true
+		}
+	},
+
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"rebornix.Ruby",
