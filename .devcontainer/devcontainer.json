@@ -10,10 +10,7 @@
 	},
 
 	"features": {
-		"docker-from-docker": {
-			"version": "latest",
-			"moby": true
-		}
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
