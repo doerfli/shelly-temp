@@ -14,7 +14,7 @@
             </p>
             <div class="w-40 inline-block m-2">Temp: <span class="font-bold p-1 rounded-lg <%= bg_color_temp(device.last_temp_value) %>"><%= device.last_temp_value %>℃</span></div>
             <div class="w-40 inline-block">Hum: <span class="font-bold p-1 rounded-lg <%= bg_color_hum(device.last_hum_value) %>"><%= device.last_hum_value %>%</span></div>
-            <div class="w-40 inline-block text-xs">(<%= device.last_update_timestamp %>)</div>
+            <div class="w-40 inline-block text-xs <%= "text-red-500" unless device.last_update_at.after?(1.day.ago) %>">(<%= device.last_update_timestamp %>)</div>
         </div>
     <% } %>
 </div>
