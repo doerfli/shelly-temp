@@ -273,10 +273,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@rails/ujs@^7.0.4":
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-7.0.4.tgz#7fe5387d2d82b0547fdfc6667b424ec119c86b1e"
-  integrity sha512-UY9yQxBvtqXzXScslgPwZoQd16T0+z3P6BQS4lZDJFg5xVuMIgHkHQI6dhyWEt5l/qwbGaYX+YiZu6J+oxWPOw==
+"@rails/ujs@^7.0.6":
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-7.0.6.tgz#fd8937c92335f3da9495e07292511ad5f7547a6a"
+  integrity sha512-s5v3AC6AywOIFMz0RIMW83Xc8FPIvKMkP3ZHFlM4ISNkhdUwP9HdhVtxxo6z3dIhe9vI0Our2A8kN/QpUV02Qg==
 
 "@types/eslint-scope@^3.7.3":
   version "3.7.4"
@@ -435,20 +435,20 @@
     "@webassemblyjs/ast" "1.11.1"
     "@xtuc/long" "4.2.2"
 
-"@webpack-cli/configtest@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@webpack-cli/configtest/-/configtest-2.0.1.tgz#a69720f6c9bad6aef54a8fa6ba9c3533e7ef4c7f"
-  integrity sha512-njsdJXJSiS2iNbQVS0eT8A/KPnmyH4pv1APj2K0d1wrZcBLw+yppxOy4CGqa0OxDJkzfL/XELDhD8rocnIwB5A==
+"@webpack-cli/configtest@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@webpack-cli/configtest/-/configtest-2.1.1.tgz#3b2f852e91dac6e3b85fb2a314fb8bef46d94646"
+  integrity sha512-wy0mglZpDSiSS0XHrVR+BAdId2+yxPSoJW8fsna3ZpYSlufjvxnP4YbKTCBZnNIcGN4r6ZPXV55X4mYExOfLmw==
 
-"@webpack-cli/info@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@webpack-cli/info/-/info-2.0.1.tgz#eed745799c910d20081e06e5177c2b2569f166c0"
-  integrity sha512-fE1UEWTwsAxRhrJNikE7v4EotYflkEhBL7EbajfkPlf6E37/2QshOy/D48Mw8G5XMFlQtS6YV42vtbG9zBpIQA==
-
-"@webpack-cli/serve@^2.0.2":
+"@webpack-cli/info@^2.0.2":
   version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@webpack-cli/serve/-/serve-2.0.2.tgz#10aa290e44a182c02e173a89452781b1acbc86d9"
-  integrity sha512-S9h3GmOmzUseyeFW3tYNnWS7gNUuwxZ3mmMq0JyW78Vx1SGKPSkt5bT4pB0rUnVfHjP0EL9gW2bOzmtiTfQt0A==
+  resolved "https://registry.yarnpkg.com/@webpack-cli/info/-/info-2.0.2.tgz#cc3fbf22efeb88ff62310cf885c5b09f44ae0fdd"
+  integrity sha512-zLHQdI/Qs1UyT5UBdWNqsARasIA+AaF8t+4u2aS2nEpBQh2mWIVb8qAklq0eUENnC5mOItrIB4LiS9xMtph18A==
+
+"@webpack-cli/serve@^2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@webpack-cli/serve/-/serve-2.0.5.tgz#325db42395cd49fe6c14057f9a900e427df8810e"
+  integrity sha512-lqaoKnRYBdo1UgDX8uF24AfGMifWK19TxPmM5FHc2vAGxrJ/qtyUyFBWoY1tISZdelsQ5fBcOusifo5o5wSJxQ==
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
@@ -1231,10 +1231,10 @@ postcss-value-parser@^4.0.0, postcss-value-parser@^4.2.0:
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz#723c09920836ba6d3e5af019f92bc0971c02e514"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
-postcss@^8.4.20, postcss@^8.4.23:
-  version "8.4.23"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.23.tgz#df0aee9ac7c5e53e1075c24a3613496f9e6552ab"
-  integrity sha512-bQ3qMcpF6A/YjR55xtoTr0jGOlnPOKAIMdOWiv0EIT6HVPEaJiJB4NLljSbiHoC2RX7DN5Uvjtpbg1NPdwv1oA==
+postcss@^8.4.23, postcss@^8.4.24:
+  version "8.4.24"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.24.tgz#f714dba9b2284be3cc07dbd2fc57ee4dc972d2df"
+  integrity sha512-M0RzbcI0sO/XJNucsGjvWU9ERWxb/ytp1w6dKtxTKgixdtQDq4rmx/g8W1hnaheq9jgwL/oyEdH5Bc4WwJKMqg==
   dependencies:
     nanoid "^3.3.6"
     picocolors "^1.0.0"
@@ -1515,15 +1515,15 @@ watchpack@^2.4.0:
     glob-to-regexp "^0.4.1"
     graceful-fs "^4.1.2"
 
-webpack-cli@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/webpack-cli/-/webpack-cli-5.0.2.tgz#2954c10ecb61c5d4dad6f68ee2d77f051741946c"
-  integrity sha512-4y3W5Dawri5+8dXm3+diW6Mn1Ya+Dei6eEVAdIduAmYNLzv1koKVAqsfgrrc9P2mhrYHQphx5htnGkcNwtubyQ==
+webpack-cli@^5.1.4:
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/webpack-cli/-/webpack-cli-5.1.4.tgz#c8e046ba7eaae4911d7e71e2b25b776fcc35759b"
+  integrity sha512-pIDJHIEI9LR0yxHXQ+Qh95k2EvXpWzZ5l+d+jIo+RdSm9MiHfzazIxwwni/p7+x4eJZuvG1AJwgC4TNQ7NRgsg==
   dependencies:
     "@discoveryjs/json-ext" "^0.5.0"
-    "@webpack-cli/configtest" "^2.0.1"
-    "@webpack-cli/info" "^2.0.1"
-    "@webpack-cli/serve" "^2.0.2"
+    "@webpack-cli/configtest" "^2.1.1"
+    "@webpack-cli/info" "^2.0.2"
+    "@webpack-cli/serve" "^2.0.5"
     colorette "^2.0.14"
     commander "^10.0.1"
     cross-spawn "^7.0.3"

@@ -9,7 +9,7 @@ gem 'rails', '~> 7.0.4'
 #gem 'sqlite3', '~> 1.4'
 gem 'pg', '>= 0.18'
 # Use Puma as the app server
-gem 'puma', '~> 6.2'
+gem 'puma', '~> 6.3'
 gem 'cssbundling-rails'
 gem "sprockets-rails"
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -21,7 +21,7 @@ gem 'jbuilder', '~> 2.11'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'nokogiri', '~> 1.14.3'
+gem 'nokogiri', '~> 1.15.2'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
