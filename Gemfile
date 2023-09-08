@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby File.read(".ruby-version").strip
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 7.0.6'
+gem 'rails', '~> 7.0.7'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3', '~> 1.4'
 gem 'pg', '>= 0.18'
@@ -21,7 +21,7 @@ gem 'jbuilder', '~> 2.11'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'nokogiri', '~> 1.15.2'
+gem 'nokogiri', '~> 1.15.4'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
