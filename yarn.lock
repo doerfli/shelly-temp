@@ -273,10 +273,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@rails/ujs@^7.0.6":
-  version "7.0.6"
-  resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-7.0.6.tgz#fd8937c92335f3da9495e07292511ad5f7547a6a"
-  integrity sha512-s5v3AC6AywOIFMz0RIMW83Xc8FPIvKMkP3ZHFlM4ISNkhdUwP9HdhVtxxo6z3dIhe9vI0Our2A8kN/QpUV02Qg==
+"@rails/ujs@^7.0.7":
+  version "7.0.7"
+  resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-7.0.7.tgz#54af8d66160a8a7bf7d8f184703d2bf4b3fab914"
+  integrity sha512-J2v5Ca7HgejO7diGKiDylaVDQKmbQ5FJih6Oo3hXuBKEuXlcaccJu64lj8MNVLaPVyZx0g4gaOQZQz95QEb/hg==
 
 "@types/eslint-scope@^3.7.3":
   version "3.7.4"
@@ -581,10 +581,10 @@ chalk@^2.0.0:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
-chart.js@4, chart.js@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-4.3.0.tgz#ac363030ab3fec572850d2d872956f32a46326a1"
-  integrity sha512-ynG0E79xGfMaV2xAHdbhwiPLczxnNNnasrmPEXriXsPJGjmhOBYzFVEsB65w2qMDz+CaBJJuJD0inE/ab/h36g==
+chart.js@4, chart.js@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-4.4.0.tgz#df843fdd9ec6bd88d7f07e2b95348d221bd2698c"
+  integrity sha512-vQEj6d+z0dcsKLlQvbKIMYFHd3t8W/7L2vfJIbYcfyPcRx92CsHqECpueN8qVGNlKyDcr5wBrYAYKnfu/9Q1hQ==
   dependencies:
     "@kurkle/color" "^0.3.0"
 
