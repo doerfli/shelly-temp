@@ -34,7 +34,7 @@ RUN rm -rf node_modules tmp/cache vendor/assets spec
 
 
 ### ------- Production ------- ###
-FROM ruby:3.3.0-alpine
+FROM ruby:3.2.3-alpine
 
 ENV HOME=/app \
     RAILS_ENV=production \
