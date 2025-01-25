@@ -1,18 +1,19 @@
 ### ------- Builder ------- ###
-FROM ruby:3.3.6-alpine as builder
+FROM ruby:3.3.6-alpine AS builder
 
-ENV HOME=/app \
-    RAILS_ENV=production \
-    RAILS_SERVE_STATIC_FILES=true \
-    SECRET_KEY_BASE=abcdefgh12345678 
+ENV HOME /app 
+ENV RAILS_ENV production 
+ENV RAILS_SERVE_STATIC_FILES true 
+ENV SECRET_KEY_BASE abcdefgh12345678 
 WORKDIR $HOME
 
 RUN apk update && apk upgrade && \
-    apk add --update --no-cache nodejs yarn build-base libxml2-dev libxslt-dev tzdata postgresql-dev && \
+    apk add --update --no-cache nodejs yarn build-base libxml2-dev libxslt-dev tzdata postgresql-dev ruby-dev gcompat && \
     rm -rf /var/cache/apk/* 
 
 # # speed up install of nokogiri gem
 RUN gem update bundler && \
+    bundle config --local build.nokogiri --use-system-libraries && \
     bundle config set without 'development test' && \
     bundle config set --local path 'vendor/bundle' && \
     bundle config set force_ruby_platform true 
@@ -36,10 +37,10 @@ RUN rm -rf node_modules tmp/cache vendor/assets spec
 ### ------- Production ------- ###
 FROM ruby:3.3.6-alpine
 
-ENV HOME=/app \
-    RAILS_ENV=production \
-    RAILS_SERVE_STATIC_FILES=true \
-    SECRET_KEY_BASE=abcdefgh12345678
+ENV HOME /app 
+ENV RAILS_ENV production 
+ENV RAILS_SERVE_STATIC_FILES true 
+ENV SECRET_KEY_BASE abcdefgh12345678
 WORKDIR $HOME
 
 RUN apk update && apk upgrade && \
@@ -50,7 +51,6 @@ RUN apk update && apk upgrade && \
 # Install gems
 RUN gem update bundler && \
     bundle config set without 'development test' && \
-    bundle config set force_ruby_platform true && \
     bundle config set --local deployment 'true' && \
     bundle config set --local path 'vendor/bundle'
 
