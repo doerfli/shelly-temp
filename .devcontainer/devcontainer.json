@@ -11,16 +11,27 @@
 	},
 
 	"features": {
-		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+		// "ghcr.io/devcontainers/features/ruby:1": {
+		// 	"version": "3.3.6"
+		// }
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [
-		"rebornix.Ruby",
-		"mhutchie.git-graph",
-		"eamodio.gitlens",
-		"castwide.solargraph",
-	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"github.vscode-pull-request-github",
+				"oderwat.indent-rainbow",
+				"eamodio.gitlens",
+				"mhutchie.git-graph",
+				"github.copilot",				
+				"github.copilot-chat",
+				"bradlc.vscode-tailwindcss",
+				"cweijan.vscode-postgresql-client2"
+			]
+		}
+	},
 	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [3000],
