@@ -1,5 +1,5 @@
 ### ------- Builder ------- ###
-FROM ruby:3.3.7-alpine AS builder
+FROM ruby:3.4.4-alpine AS builder
 
 ENV HOME /app 
 ENV RAILS_ENV production 
@@ -35,7 +35,7 @@ RUN rm -rf node_modules tmp/cache vendor/assets spec
 
 
 ### ------- Production ------- ###
-FROM ruby:3.3.7-alpine
+FROM ruby:3.4.4-alpine
 
 ENV HOME /app 
 ENV RAILS_ENV production 
