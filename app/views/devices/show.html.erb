@@ -14,16 +14,35 @@
             bg_color: bg_color_hum(@hum.value)
         } %>
     </div>
-    <% unless @temp_l7d.empty? %>
-        <h2 class="m-4  text-xl font-bold">Temperature last 7 days</h2>
+    <% # Helper to filter records by selected range %>
+    <% def filter_by_range(records, range)
+         cutoff = case range
+           when '1d' then 1.day.ago
+           when '3d' then 3.days.ago
+           else 7.days.ago
+         end
+         records.select { |r| r.created_at >= cutoff }
+       end %>
+    <!-- Time range switcher -->
+    <div class="m-4 flex">
+        <% ranges = { '1d' => '1 Day', '3d' => '3 Days', '7d' => '7 Days' } %>
+        <% current_range = params[:range] || '7d' %>
+        <% ranges.each_with_index do |(key, label), idx| %>
+            <%= link_to label, device_path(@device, range: key), class: "px-3 py-1 rounded border "+(current_range == key ? 'bg-blue-600 text-white' : 'bg-white text-blue-600 border-blue-600 hover:bg-blue-100')+ (idx < ranges.size-1 ? ' mr-2' : '') %>
+        <% end %>
+    </div>
+    <% filtered_temp = filter_by_range(@temp_l7d, current_range) %>
+    <% unless filtered_temp.empty? %>
+        <h2 class="m-4  text-xl font-bold">Temperature last <%= ranges[current_range] %></h2>
         <div class="m-4">
-            <%= line_chart @temp_l7d.map{ |t| [t.created_at, t.value] }, min: @temp_l7d_min, max: @temp_l7d_max %>
+            <%= line_chart filtered_temp.map{ |t| [t.created_at, t.value] }, min: @temp_l7d_min, max: @temp_l7d_max %>
         </div>
     <% end %>
-    <% unless @hum_l7d.empty? %>
-        <h2 class="m-4  text-xl font-bold">Humidity last 7 days</h2>
+    <% filtered_hum = filter_by_range(@hum_l7d, current_range) %>
+    <% unless filtered_hum.empty? %>
+        <h2 class="m-4  text-xl font-bold">Humidity last <%= ranges[current_range] %></h2>
         <div class="m-4">
-            <%= line_chart @hum_l7d.map{ |t| [t.created_at, t.value] }, min: @hum_l7d_min, max: @hum_l7d_max %>
+            <%= line_chart filtered_hum.map{ |t| [t.created_at, t.value] }, min: @hum_l7d_min, max: @hum_l7d_max %>
         </div>
     <% end %>
     <div class="m-4">
