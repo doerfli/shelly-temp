@@ -9,7 +9,7 @@ gem 'rails', '~> 8.0'
 #gem 'sqlite3', '~> 1.4'
 gem 'pg', '>= 0.18'
 # Use Puma as the app server
-gem 'puma', '~> 6.6'
+gem 'puma', '~> 7.1'
 gem 'cssbundling-rails'
 gem "sprockets-rails"
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
