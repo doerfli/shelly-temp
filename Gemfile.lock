@@ -184,7 +184,7 @@ GEM
       date
       stringio
     public_suffix (6.0.1)
-    puma (6.6.0)
+    puma (7.1.0)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.2.3)
@@ -346,7 +346,7 @@ DEPENDENCIES
   listen (~> 3.9)
   nokogiri (~> 1.18)
   pg (>= 0.18)
-  puma (~> 6.6)
+  puma (~> 7.1)
   rack-mini-profiler (~> 4.0)
   rails (~> 8.1)
   selenium-webdriver
