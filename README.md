@@ -18,6 +18,16 @@ Run server
 bundle exec rails start
 ```
 
+## Start development server
+
+Start dev-server, css build, js build
+
+```
+bin/dev
+yarn build:css --watch
+yarn build --watch
+```
+
 ## Configuration
 
 Point your shelly to `http://<hostname>:<port>/measurements/new`
