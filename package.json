@@ -4,7 +4,7 @@
   "dependencies": {
     "@babel/plugin-proposal-private-methods": "^7.18.6",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@tailwindcss/cli": "^4.1.16",
+    "@tailwindcss/cli": "^4.2.1",
     "@tailwindcss/postcss": "^4.1.16",
     "autoprefixer": "^10.4.21",
     "chart.js": "^4.5.1",
