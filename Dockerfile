@@ -1,5 +1,5 @@
 ### ------- Builder ------- ###
-FROM ruby:3.4.7-alpine AS builder
+FROM ruby:3.4.8-alpine AS builder
 
 ENV HOME /app 
 ENV RAILS_ENV production 
