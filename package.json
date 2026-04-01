@@ -9,7 +9,7 @@
     "autoprefixer": "^10.4.27",
     "chart.js": "^4.5.1",
     "chartkick": "^5.0.1",
-    "postcss": "^8.5.6",
+    "postcss": "^8.5.8",
     "postcss-cli": "^11.0.1",
     "postcss-import": "^16.1.1",
     "postcss-nesting": "^14.0.0",
