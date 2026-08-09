@@ -3,15 +3,19 @@
     <div class="flex flex-row flex-wrap">
         <%= render partial: "value_box", locals: { 
             key: "Temperature", 
-            value: "#{@temp.value}℃", 
+            value: "#{@temp.value}℃",
             timestamp: @temp.created_at,
-            bg_color: bg_color_temp(@temp.value)
+            bg_color: bg_color_temp(@temp.value),
+            trend_short: @temp_trend_short,
+            trend_long: @temp_trend_long
         } %>
         <%= render partial: "value_box", locals: { 
             key: "Humidity", 
-            value: "#{@hum.value}%", 
+            value: "#{@hum.value}%",
             timestamp: @hum.created_at,
-            bg_color: bg_color_hum(@hum.value)
+            bg_color: bg_color_hum(@hum.value),
+            trend_short: @hum_trend_short,
+            trend_long: @hum_trend_long
         } %>
     </div>
     <% # Helper to filter records by selected range %>

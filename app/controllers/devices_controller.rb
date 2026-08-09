@@ -21,7 +21,13 @@ class DevicesController < ApplicationController
         @temp = Value.includes(:type)
                     .where(device: @device, type: { name: 'temp' })
                     .order(created_at: :desc).first
-        
+
+        @temp_trend_short = @device.trend('temp', :short)
+        @temp_trend_long = @device.trend('temp', :long)
+        @hum_trend_short = @device.trend('hum', :short)
+        @hum_trend_long = @device.trend('hum', :long)
+
+
         # get timeseries for charts
         @temp_l7d = Value.includes(:type)
                     .where(device: @device, type: { name: 'temp' }, created_at: TIMESERIES_RANGE.ago..Time.now)
