@@ -1,7 +1,5 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+temp:
+  name: temp
 
-one:
-  name: MyString
-
-two:
-  name: MyString
+hum:
+  name: hum
