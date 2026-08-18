@@ -9,6 +9,8 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "monthly"
+    cooldown:
+      default-days: 3
     open-pull-requests-limit: 25
     # ignore:
     #   - dependency-name: "webpacker"
@@ -18,18 +20,26 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    cooldown:
+      default-days: 3
   - package-ecosystem: "docker"
     directory: "/.devcontainer/"
     schedule:
       interval: "monthly"
+    cooldown:
+      default-days: 3
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "monthly"
+    cooldown:
+      default-days: 3
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "monthly"
+    cooldown:
+      default-days: 3
     open-pull-requests-limit: 25
     ignore:
       - dependency-name: "webpack" # 5 not supported yet
