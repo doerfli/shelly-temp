@@ -156,10 +156,10 @@
     "@babel/helper-string-parser" "^7.25.9"
     "@babel/helper-validator-identifier" "^7.25.9"
 
-"@csstools/selector-resolve-nested@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@csstools/selector-resolve-nested/-/selector-resolve-nested-4.0.1.tgz#2b42c036c5ef3d400561458bdf1790466e0fe99a"
-  integrity sha512-j3vdQu0XwLME5qOTWxm8cnmvsf423R2YL6DbKklCHZwkDm7UdKNu6RPlw4REIJhSlKBICY3B70/7QZdicLqZgg==
+"@csstools/selector-resolve-nested@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@csstools/selector-resolve-nested/-/selector-resolve-nested-4.0.2.tgz#14d25d3dcaa9dd989eec0a75c5dc51557febb876"
+  integrity sha512-JpjNBJFA+4OnAHKRK4AMp8xrYyLhI9XapOeBlP2PhRU/IylSw+1ep3BFNTksBJnrTS3KT6kqKNVfpzLLwZUW5Q==
 
 "@csstools/selector-specificity@^6.0.0":
   version "6.0.0"
@@ -1445,12 +1445,12 @@ postcss-load-config@^5.0.0:
     lilconfig "^3.1.1"
     yaml "^2.4.2"
 
-postcss-nesting@^14.0.1:
-  version "14.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-14.0.1.tgz#f5306f809faf9e70e9ab3b2fdc4dc627f1d72d4a"
-  integrity sha512-80MH7KcmMtb7ffSBX82uZwnogltubaXF0sagu+OGD8M9jViR3ngRgCdoTzKCvKEtllB0MW2U7Rgfcub5fR1Bug==
+postcss-nesting@^14.0.2:
+  version "14.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-14.0.2.tgz#7576fa4ddf03736291fd37d3d9264445af0caa05"
+  integrity sha512-nMaYODQw0AkF2bE1Zo3KWCOYF94MgvVB5ftnZnZ7Ve0z5W20QtMMjOf5nOBVsnisNxIC8Ky04Y7GPckp/I5KlQ==
   dependencies:
-    "@csstools/selector-resolve-nested" "^4.0.1"
+    "@csstools/selector-resolve-nested" "^4.0.2"
     "@csstools/selector-specificity" "^6.0.0"
     postcss-selector-parser "^7.1.1"
 
