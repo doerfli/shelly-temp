@@ -7,7 +7,7 @@
     "@tailwindcss/cli": "^4.3.3",
     "@tailwindcss/postcss": "^4.3.3",
     "autoprefixer": "^10.5.4",
-    "chart.js": "^4.5.1",
+    "chart.js": "^4.6.1",
     "chartkick": "^5.0.1",
     "postcss": "^8.5.25",
     "postcss-cli": "^11.0.1",
