@@ -11,11 +11,19 @@ updates:
       interval: "monthly"
     cooldown:
       default-days: 3
+      semver-major-days: 7
     open-pull-requests-limit: 25
-    # ignore:
-    #   - dependency-name: "webpacker"
-    #     versions: 
-    #       - ">= 5"
+    groups:
+      bundler-patch:
+        patterns:
+          - "*"
+        update-types:
+          - "patch"
+      bundler-minor:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
@@ -40,15 +48,18 @@ updates:
       interval: "monthly"
     cooldown:
       default-days: 3
+      semver-major-days: 7
+    groups:
+      npm-patch:
+        patterns:
+          - "*"
+        update-types:
+          - "patch"
+      npm-minor:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
     open-pull-requests-limit: 25
-    ignore:
-      - dependency-name: "webpack" # 5 not supported yet
-        versions: ["5.x"]
-      - dependency-name: "webpack-cli" # major must be in sync with webpack-dev-server
-        versions: ["4.x"]
-      - dependency-name: "webpack-dev-server" # major must be in sync with webpack-cli
-        versions: ["4.x"]
-    #   - dependency-name: "sass-loader"
-    #     versions: [ "11.x", "12.x" ]
-    #   - dependency-name: "eslint"
-    #     versions: [ "7.x" ]
+    # ignore:
+
